@@ -1,0 +1,90 @@
+html,
+#root {
+  padding: 0;
+  margin: 0;
+  background-color: lightgray;
+  font-style: monospace;
+}
+.routesContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.formContainer {
+  width: 400px;
+  height: 40px;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  height: 100vh;
+}
+li {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 5px;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+}
+
+label {
+  padding: 0 15px;
+}
+
+input:checked + label {
+  text-decoration: line-through;
+}
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalWindow {
+  background-color: white;
+  width: fit-content;
+  align-items: center;
+}
+@media screen and (max-width: 400px) {
+  .headerContainer {
+    flex-direction: column-reverse;
+  }
+  .formContainer {
+    width: 300px;
+  }
+  .todoList {
+    margin-top: 90px;
+  }
+}
