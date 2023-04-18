@@ -13,7 +13,6 @@ export const Login = () => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
         dispatch(
           setUser({
             email: user.email,
@@ -26,5 +25,10 @@ export const Login = () => {
       .catch(() => alert("Invalid user!"));
   };
 
-  return <Form title="Welcome back! Please login to continue." handleClick={handleLogin} />;
+  return (
+    <Form
+      title="Welcome back! Please login to continue."
+      handleClick={handleLogin}
+    />
+  );
 };

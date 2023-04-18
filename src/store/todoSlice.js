@@ -15,7 +15,6 @@ export const fetchTodos = createAsyncThunk(
     }
   }
 );
-
 export const addNewTask = createAsyncThunk(
   "todos/AddNewTask",
   async function (todo, { rejectWithValue, dispatch }) {
@@ -127,6 +126,7 @@ const todoSlice = createSlice({
       });
     builder
       .addCase(addNewTask.pending, (state, action) => {
+        state.status = "loading";
         state.error = null;
       })
       .addCase(addNewTask.fulfilled, (state, action) => {
@@ -139,6 +139,7 @@ const todoSlice = createSlice({
       });
     builder
       .addCase(removeTodo.pending, (state, action) => {
+        state.status = "loading";
         state.error = null;
       })
       .addCase(removeTodo.fulfilled, (state, action) => {
@@ -151,6 +152,7 @@ const todoSlice = createSlice({
       });
     builder
       .addCase(toggleStatus.pending, (state, action) => {
+        state.status = "loading";
         state.error = null;
       })
       .addCase(toggleStatus.fulfilled, (state, action) => {
