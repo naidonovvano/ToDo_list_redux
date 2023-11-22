@@ -14,7 +14,7 @@ _These test-information will be deleted automatically after 24h_
 
 ## Installation and Launch
 
-To run this project in your browser navigate to [these](https://auth-todo-test.web.app) link.
+To run this project in your browser navigate to [this](https://auth-todo-test.web.app) link.
 
 To install `ToDo list`, follow these steps:
 
